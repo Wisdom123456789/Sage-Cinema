@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    padding: 1em 0;
+    width: 100%;
+    background-color: rgb(11,11,13);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    border-bottom: 0.4px solid lightgray;
+
+    .inside-header{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            width: 15%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .icons{
+            display: none;
+
+            button{
+                color: white;
+                background: none;
+                border: none;
+            }
+        }
+
+        .nav-one, .nav-two{
+            width: 35%;
+            display: flex;
+            justify-content: space-between;
+
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 14px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            a:hover{
+                text-decoration: line-through;
+            }
+        }
+
+        .nav-two{
+            width: 10%;
+        }
+    }
+}
+
+@media(max-width: 800px){
+    header{
+
+        .inside-header{
+
+            .logo{
+                width: 30%;
+                
+            }
+            .nav-one{
+                display: none;
+            }
+            .nav-two{
+                display: none;
+            }
+            .icons{
+                display: block;
+            }
+        }
+    }
+}
+
+main{
+    background-color: rgb(11,11,13);
+    padding: 5em 0 0 0;
+    display: flex;
+    justify-content: center;
+
+    .inside-main{
+        width: 90%;
+
+        .first-part{
+            width: 100%;
+            padding: 2em 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h1{
+                font-size: 30px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: 600;
+                color: white;
+            }
+
+            .select{
+                width: 30%;
+                display: flex;
+                justify-content: space-between;
+                
+                select{
+                    width: 45%;
+                    color: white;
+                    height: 40px;
+                    padding: 0 30px;
+                    background: none;
+                    border-radius: 5px;
+                    border: 0.5px solid lightgray;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+            }
+        }
+        
+        .second-part{
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            .each-one{
+                width: 18%;
+                background-color: rgb(22,22,26);
+                padding: 2em 0;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .image{
+                    width: 90%;
+                    display: flex;
+                    justify-content: center;
+                    
+                    img{
+                        width: 50%;
+                    }
+                }
+
+                .large{
+                    width: 90%;
+                    padding: 1em 0;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    color: white;
+                    font-weight: 700;
+                }
+
+                .prices{
+                    width: 90%;
+                    display: flex;
+                    padding: 0.5em 0;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    p{
+                        color: rgb(96, 206, 209);
+                        font-size: 22px;
+                        font-family: 'Times New Roman', Times, serif;
+                    }
+
+                    .increment{
+                        width: 40%;
+                        justify-content: space-between;
+                        display: flex;
+                        align-items: center;
+
+                        p{
+                            background-color: white;
+                            width: 30px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 800px){
+    main{
+
+        .inside-main{
+
+            .first-part{
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                h1{
+                    padding:0 0 0.5em 0;
+                }
+
+                .select{
+                    width: 90%;
+                    gap: 10px;
+                    justify-content: flex-start;
+
+                    select{
+                        width: 40%;
+                    }
+                }
+            }
+
+            .second-part{
+                justify-content: space-between;
+
+                .each-one{
+                    width: 47%;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: rgb(11,11,13);
+    display: flex;
+    padding: 3em 0;
+    justify-content: center;
+
+    .inside-footer{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+        .logo-footer{
+            width: 15%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        ul{
+            list-style: none;
+            line-height: 28px;
+            
+            h5{
+                color: rgb(151, 151, 151);
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            li, a{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    footer{
+        .inside-footer{
+            flex-direction: column;
+
+            .logo-footer{
+                width: 30%;
+            }
+        }
+    }
+}
